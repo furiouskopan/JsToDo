@@ -227,7 +227,8 @@ select{
 
 #playBtn2 {
     position: fixed;
-    top: 30%;
+    top: 31%;
+    margin-bottom: 40px;
   }
 
   #playBtn1:hover, #playBtn2:hover {
@@ -238,3 +239,13 @@ select{
     background-color: #9d4d4d;
   }
   
+  #vol-container {
+    position: fixed;
+    top: 41%; 
+    left: 0; 
+    padding-left: 40px;
+}
+
+#vol {
+    width: 260px; 
+}

@@ -322,6 +322,14 @@ function onPlayerReady(event) {
 
 // Date and Time
 window.onload = function() {
+    var vol = document.getElementById('vol');
+    vol.addEventListener('input', function() {
+        for(var key in players) {
+            if (players[key].player) {
+                players[key].player.setVolume(this.value);
+            }
+        }
+    });
     (function() {
       function checkTime(i) {
         return (i < 10) ? "0" + i : i;
