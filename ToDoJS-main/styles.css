@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('circles.svg');
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: "Manrope", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    color: #fe1c42;
+    margin-top: 2rem;
+    font-size: 1.8rem;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 600px;
+}
+
+h1:hover {
+    text-decoration: underline;
+}
+
+input:hover {
+    opacity: 1;
+}
+
+header, form {
+    min-height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.584);
+    cursor: pointer;
+}
+
+form button {
+    color: #A7233A;
+    background: rgba(255, 255, 255, 0.584);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #9d4d4d00;
+    color: white;
+}
+
+.todo-container {
+    width: 80%;
+    max-width: 600px;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: circle;
+}
+
+li {
+    color: #A7233A;
+}
+
+.todo {
+    margin: 0.5rem;
+    background: rgba(255, 255, 255, 0.584);
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.1s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.trash-btn, .complete-btn {
+    background: #9d4d4dfe;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    cursor: pointer;
+}
+
+.trash-btn {
+    background: rgba(255, 0, 0, 0.745);
+}
+
+.complete-btn {
+    background: rgba(0, 128, 0, 0.856);
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+    cursor: default;
+}
+
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.fade {
+    transform: translateX(5rem);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    opacity: 0.6;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: #A7233A;
+    width: 7.3rem;
+    cursor: pointer;
+    padding: 0.9rem;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #A7233A;
+    top: 0;
+    right: 0;
+    padding: 0.7rem;
+    pointer-events: none;
+    transition: all 0.1s ease;
+}
+
+.select:hover::after {
+    background: rgba(255, 255, 255, 0);
+    color: #A7233A;
+}
+
+/* Timer */
+.timer-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: flex-start; /* Align to the left */
+}
+
+.control-container {
+    width: 100%; /* Set a width */
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; /* Align to the left */
+}
+
+.timer-buttons {
+    display: flex;
+    gap: 1rem; 
+}
+
+.audio-btn {
+    margin: 0.5rem 0; /* Adjust spacing */    
+}
+
+#pause-button {
+    display: none;
+    background: #9d4d4d00;
+    height: 60px;
+    width: 50px;
+    color: white;
+}
+
+#vol-container {
+    padding-left: 10px; /* Adjust as per needs */
+}
+
+#timer {
+    font-size: 72px;
+    width: 190px;
+}
+
+#status {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 12px;
+}
+
+#pause-button:hover {
+    background: #A7233A;
+}
+
+.button-timer {
+    padding: 10px 20px;
+    margin: 0 13px;
+    padding: 0.7rem;
+    font-size: 1.5rem;
+    border: none;
+    background: #A7233A;
+    color: rgba(255, 255, 255, 0.863);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#playBtn1, #playBtn2 {
+    display: inline-block;
+    padding: 4px 20px;
+    border: none;
+    background-color: #A7233A;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+
+#playBtn1:hover, #playBtn2:hover {
+    background-color: #9d4d4d;
+}
+
+#playBtn:hover, #playBtn2:hover {
+    background-color: #9d4d4d;
+}
+
+#vol-container {
+    position: relative;
+    padding-top: 20px; /* Adjust as per needs */
+}
+
+#vol {
+    width: 260px;
+}
+.timer-beats {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    padding: 0 2rem;
+    box-sizing: border-box; 
+}
+
+@media (max-width: 1250px) {
+    .timer-beats, #time-date  {
+        display: none;
+    }
+
+    .control-container {
+        align-items: center;
+    }
+
+    .timer-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

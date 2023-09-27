@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel = "icon" href = "http://icons.iconarchive.com/icons/inipagi/job-seeker/1024/checklist-icon.png" type = "image/x-icon">
+    <title>To Do List</title>
+</head>
+<body>
+    <header>
+        <h1>Gorgi's ToDo List</h1>
+    </header>
+    <form action="">
+        <input type="text" class="todo-input" onkeyup="success()" placeholder="Enter your task for today" required>
+        <button class="todo-button" type="submit" disabled>
+            <i class="fas fa-plus-square"></i>
+        </button>
+        <div class="select">
+            <select name="todos" class="filter-todo">
+                <option value="all">All</option>
+                <option value="completed">Done</option>
+                <option value="uncompleted">Not done</option>
+            </select>
+        </div>
+    </form>
+    <div class="todo-container">
+        <ul class="todo-list"></ul>
+    </div>
+    <div class="timer-beats">
+        <div class="timer-container">
+            <div id="timer">25:00</div>
+            <button class="button-timer" id="pause-button">| |</button>
+        </div>
+        <div class="control-container">
+            <div class="timer-buttons">
+                <button onclick="startTimer()" class="button-timer">Start</button>
+                <button onclick="resetTimer()" class="button-timer">Reset</button>
+            </div>
+            
+            <div id="status"></div>
+            
+            <div id="player1" style="display:none;"></div>
+            <a href="#" id="playBtn1" class="audio-btn">40 hz Binaural beats</a>
+        
+            <div id="player2" style="display:none;"></div>
+            <a href="#" id="playBtn2" class="audio-btn">Brown Noise</a>
+            
+            <div id="vol-container">
+                <input type="range" id="vol" />
+            </div>
+        </div>
+        <script src="app.js"></script>
+        <audio id="audio" src="chime-sound-7143.mp3" autoplay></audio>
+    </div>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <div id="time-date" style="position: absolute; top: 0; right: 0; padding: 20px; text-align: right; color: #fff; font-size: larger;">
+        <div id="time"></div>
+        <div id="date"></div>
+    </div>
+</body>
+</html>
