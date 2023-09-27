@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
     <meta charset="UTF-8">
+=======
+ <meta charset="UTF-8">
+>>>>>>> c8f1eed9b96c699c40f581ce3176dab814a03925
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
@@ -28,6 +32,7 @@
         </div>
     </form>
     <div class="todo-container">
+<<<<<<< HEAD
         <ul class="todo-list"></ul>
     </div>
     <div class="timer-beats">
@@ -63,3 +68,41 @@
     </div>
 </body>
 </html>
+=======
+        <ul class="todo-list">
+            <!-- <div class="todo"></div> -->
+        </ul>
+    </div>
+    <div class="timer-container">
+        <div id="timer">25:00</div>
+        <button class="button-timer" id="pause-button">I I</button>
+        <!-- <button onclick="pauseTimer()" class="button-timer">Pause</button> -->
+    </div>
+    <div class="control-container">
+        <button onclick="startTimer()" class="button-timer">Start</button>
+        <button onclick="resetTimer()" class="button-timer">Reset</button>
+        <div id="status"></div>
+    </div>
+    <script src="app.js"></script>
+    <audio id="audio" src="chime-sound-7143.mp3" autoplay></audio>
+
+    <div id="player1" style="display:none;"></div>
+    <a href="#" id="playBtn1" class="audio-btn">40 hz Binaural beats</a>
+
+    <div id="player2" style="display:none;"></div>
+    <a href="#" id="playBtn2" class="audio-btn">Brown Noise</a>
+
+    <div id="vol-container">
+        <input type="range" id="vol" name="vol" min="0" max="100">
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    
+    <div id="time-date" style="position: absolute; top: 0; right: 0; padding: 20px; text-align: right; color: #fff; font-size: larger;">
+        <div id="time"></div>
+        <div id="date"></div>
+      </div>
+      
+</body>
+</html>
+>>>>>>> c8f1eed9b96c699c40f581ce3176dab814a03925
